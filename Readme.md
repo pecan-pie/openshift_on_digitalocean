@@ -1,3 +1,12 @@
+With this terraform scripts we try to make the install process of OpenShift 4.1 on DigitalOcean easy. Everything has been taken from the official documentation (https://docs.openshift.com/container-platform/4.1/installing/installing_bare_metal/installing-bare-metal.html).
+**Note: This will never be a production ready cluster. This cluster is for testing only!**
+
+# Preconditions
+* openshift-install is in your PATH
+* terraform > 1.12 is in your PATH
+* you have a ssh public key in ~/.ssh/..
+* you have a image pull secret from redhat
+
 # Howto
 1. cp install-config.yaml.sample install-config.yaml
 2. vi install-config.yaml
