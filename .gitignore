@@ -1,0 +1,9 @@
+terraform.tfvars
+auth
+.terraform
+.openshift*
+*.ign
+metadata.json
+install-config.yaml
+config
+terraform.tfstate*
