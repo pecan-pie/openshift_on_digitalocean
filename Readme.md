@@ -1,4 +1,4 @@
-= Howto
+# Howto
 1. cp install-config.yaml.sample install-config.yaml
 2. vi install-config.yaml
 3. mkdir config
@@ -7,6 +7,6 @@
 6. terraform init
 7. terraform apply --var do_token= .... --var domain= ....
 
-= Issues
+# Issues
 * bootstap userdata is greater than 64kb
 * loadbalancer configuration is wrong (update issues from terraform 1.11 -> 1.12)
