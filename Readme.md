@@ -1,4 +1,5 @@
 With this terraform scripts we try to make the install process of OpenShift 4.1 on DigitalOcean easy. Everything has been taken from the official documentation (https://docs.openshift.com/container-platform/4.1/installing/installing_bare_metal/installing-bare-metal.html).
+
 **Note: This will never be a production ready cluster. This cluster is for testing only!**
 
 # Preconditions
@@ -15,6 +16,7 @@ With this terraform scripts we try to make the install process of OpenShift 4.1 
 5. openshift-install create ignition-configs --dir config
 6. terraform init
 7. terraform apply --var do_token= .... --var domain= ....
+8. delete the bootstrap and bootstrap-helper node
 
 # Issues
 * bootstap userdata is greater than 64kb
