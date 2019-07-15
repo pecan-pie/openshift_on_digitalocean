@@ -15,7 +15,7 @@ resource "digitalocean_loadbalancer" "api" {
     protocol = "tcp"
   }
 
-  droplet_tag = "bootstrap"
+  droplet_tag = "api"
   // droplet_ids = [digitalocean_droplet.boostrap.id, digitalocean_droplet.control-plane.*.id]
 }
 
@@ -40,11 +40,11 @@ resource "digitalocean_loadbalancer" "api-int" {
   }
 
   healthcheck {
-    port     = 22
+    port     = 22623
     protocol = "tcp"
   }
 
-  droplet_tag = "bootstrap"
+  droplet_tag = "api"
   // droplet_ids = ["${digitalocean_droplet.boostrap.id}", "${digitalocean_droplet.control-plane.*.id}"]
 
   //droplet_ids = ["${digitalocean_droplet.web.id}"]
@@ -71,7 +71,7 @@ resource "digitalocean_loadbalancer" "apps" {
   }
 
   healthcheck {
-    port     = 22
+    port     = 443
     protocol = "tcp"
   }
 
